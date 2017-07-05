@@ -214,6 +214,7 @@
                 </div>
                 @yield('content_users')
                 @yield('content_users_create')
+                @yield('content_users_edit')
             </div>
             <!-- /.row -->
 
