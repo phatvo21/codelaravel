@@ -15,19 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['middleware'=>'web'], function (){
-
 Route::auth();
 
 Route::get('/admin', function (){
 
-        return view('admin.index');
-    });
+    return view('admin.index');
+});
 
 
 Route::get('/home', 'HomeController@index');
 
+Route::group(['middleware'=>'web'], function (){
+
+
 Route::resource('admin/users','AdminUsersController');
+Route::resource('admin/posts','AdminPostsController');
 
 
 });
