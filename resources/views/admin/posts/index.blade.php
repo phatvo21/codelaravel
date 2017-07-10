@@ -23,7 +23,7 @@
                 <tr>
                     <td>{{$post->id}}</td>
                     <td><img width="80" height="80" src="{{$post->photo ? $post->photo->file : 'no user photo'}}" alt=""></td>
-                    <td>{{$post->category_id}}</td>
+                    <td>{{$post->category->name}}</td>
                     <td>{{$post->user->name}}</td>
                     <td>{{$post->title}}</td>
                     <td>{{$post->body}}</td>
